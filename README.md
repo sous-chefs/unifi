@@ -17,7 +17,6 @@ NOTE: The self_run_guest_mode won't take effect until a second Chef run after th
 
 # Notes
 Feel free to fork this, modify and/or add to it.
-- At the moment, the 
 
 # Author
 
