@@ -9,4 +9,4 @@
 #
 
 include_recipe 'unifi::install'
-include_recipe 'unifi::configure'
+#include_recipe 'unifi::configure'
