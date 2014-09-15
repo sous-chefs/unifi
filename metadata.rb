@@ -1,9 +1,9 @@
 name             'unifi'
-maintainer       'Brian Dwyer - Intelligent Digital Services'
-maintainer_email 'BDwyerTech'
-license          'All rights reserved'
-description      'Installs/Configures ubnt-unifi'
+maintainer       'Greg Albrecht'
+maintainer_email 'gba@onbeep.com'
+license          'Apache License, Version 2.0'
+description      'Installs/Configures Ubiquiti UniFi server.'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.0.0'
+version IO.read(File.join(File.dirname(__FILE__), 'VERSION')) rescue '1.0.0'
 
 depends 'apt'

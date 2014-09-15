@@ -13,3 +13,10 @@ Gemfile.lock
 bin/*
 .bundle/*
 
+# PT client
+.pt
+
+.kitchen/
+.kitchen.local.yml
+VERSION
+build/

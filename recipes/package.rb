@@ -1,6 +1,6 @@
-# Default Attributes for unifi.
+# Installs unifi package.
 #
-# Attributes:: default
+# Recipe:: package
 # Cookbook:: unifi
 # Author:: Greg Albrecht <gba@onbeep.com>
 # License:: Apache License, Version 2.0
@@ -9,5 +9,4 @@
 #
 
 
-# => Specify Unifi package to install
-default['unifi']['package'] = 'unifi'
+apt_package node['unifi']['package']

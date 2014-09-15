@@ -1,6 +1,6 @@
-# Default Attributes for unifi.
+# Configures unifi service.
 #
-# Attributes:: default
+# Recipe:: service
 # Cookbook:: unifi
 # Author:: Greg Albrecht <gba@onbeep.com>
 # License:: Apache License, Version 2.0
@@ -9,5 +9,7 @@
 #
 
 
-# => Specify Unifi package to install
-default['unifi']['package'] = 'unifi'
+service 'unifi' do
+  supports status: true, restart: true, reload: true
+  action [:enable, :start]
+end

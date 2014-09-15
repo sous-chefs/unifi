@@ -1,12 +1,19 @@
-# Encoding: UTF-8
+# Includes requisite Recipies for unifi.
 #
-# Cookbook Name:: unifi
 # Recipe:: default
-#
-# Copyright (C) 2014 Intelligent Digital Services - Brian Dwyer
-#
-# All rights reserved - Do Not Redistribute
+# Cookbook:: unifi
+# Author:: Greg Albrecht <gba@onbeep.com>
+# License:: Apache License, Version 2.0
+# Copyright:: Copyright 2014 OnBeep, Inc.
+# Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-include_recipe 'unifi::install'
-#include_recipe 'unifi::configure'
+
+include_recipe 'unifi::ppa'
+include_recipe 'unifi::package'
+
+if platform?('ubuntu') and node['lsb']['codename'] == 'trusty'
+  include_recipe 'unifi::_java_link_trusty_tahr'
+end
+
+include_recipe 'unifi::service'
