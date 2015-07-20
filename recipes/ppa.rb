@@ -10,9 +10,8 @@
 
 
 apt_repository 'ubiquiti_unifi' do
-  uri 'http://www.ubnt.com/downloads/unifi/distros/deb/ubuntu'
-  distribution 'ubuntu'  # yes, it's generic.
-  components ['ubiquiti']
+  uri 'http://www.ubnt.com/downloads/unifi/debian'
+  components ['stable', 'ubiquiti']
   keyserver 'keyserver.ubuntu.com'
   key 'C0A52C50'
 end
