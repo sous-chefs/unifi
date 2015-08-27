@@ -94,3 +94,16 @@ Vagrantfile
 # Travis #
 ##########
 .travis.yml
+
+
+# CircleCI #
+##########
+circle.yml
+
+# Makefile #
+##########
+Makefile
+
+# Ruby #
+##########
+vendor/*

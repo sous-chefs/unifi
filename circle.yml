@@ -1,0 +1,26 @@
+machine:
+  ruby:
+    version: 2.1.1
+  environment:
+    KITCHEN_YAML: ".kitchen.cloud.yml"
+    AWS_KEYPAIR_NAME: "circleci"
+    AWS_REGION: "us-east-1"
+    EC2_INSTANCE_TYPE: "m3.medium"
+    AWS_UBUNTU_1404_AMI: "ami-e63b3e8e"
+
+test:
+  override:
+    - bundle exec foodcritic .
+    - bundle exec kitchen test
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - git config --global user.name "CircleCI"
+      - git config --global user.email "code@onbeep.com"
+      - bundle exec scmversion bump auto --default patch
+      - git push origin --tags
+      - bundle exec berks install -c berkshelf.json
+      - bundle exec berks upload -c berkshelf.json
+      - curl -X POST $TRIGGER_URL
