@@ -28,5 +28,4 @@ suites:
     run_list:
       - recipe[apt]
       - recipe[unifi]
-    data_bag_path: "test/integration/data_bags"
     attributes:
