@@ -9,7 +9,6 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
-source 'https://api.berkshelf.com'
+source 'https://supermarket.chef.io'
 
 metadata
