@@ -8,7 +8,6 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
 service 'unifi' do
   supports status: true, restart: true, reload: true
   action [:enable, :start]

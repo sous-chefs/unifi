@@ -8,11 +8,10 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
 include_recipe 'unifi::ppa'
 include_recipe 'unifi::package'
 
-if platform?('ubuntu') and node['lsb']['codename'] == 'trusty'
+if platform?('ubuntu') && node['lsb']['codename'] == 'trusty'
   include_recipe 'unifi::_java_link_trusty_tahr'
 end
 
