@@ -22,7 +22,7 @@ Recipes
 Includes other requisite Recipes - **USE THIS**.
 
 ### ppa
-Configures Ubiquity's PPA repository for package installs.
+Configures Ubiquiti's PPA repository for package installs.
 
 ### package
 Installs unifi package.

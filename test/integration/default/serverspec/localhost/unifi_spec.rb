@@ -6,9 +6,7 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
 require 'spec_helper'
-
 
 describe 'UniFi' do
   describe package('unifi') do
@@ -23,9 +21,10 @@ describe 'UniFi' do
     it { should be_listening }
   end
 
-  describe port('8081') do
-    it { should be_listening }
-  end
+  # Disabled as unifi no longer seems to use port 8081
+  # describe port('8081') do
+  #   it { should be_listening }
+  # end
 
   describe port('8443') do
     it { should be_listening }
@@ -39,7 +38,6 @@ describe 'UniFi' do
     it { should be_listening }
   end
 end
-
 
 describe 'MongoDB' do
   describe package('mongodb-server') do

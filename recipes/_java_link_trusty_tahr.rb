@@ -9,7 +9,6 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
 link '/usr/lib/jvm/java-6-openjdk' do
   to '/usr/lib/jvm/java-6-openjdk-amd64'
 end

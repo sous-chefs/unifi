@@ -8,5 +8,4 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
-apt_package node['unifi']['package']
+apt_package 'unifi'
