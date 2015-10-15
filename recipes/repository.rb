@@ -1,6 +1,6 @@
-# Configures Ubiquiti's PPA repository for package installs.
+# Configures Ubiquiti's APT repository for package installs.
 #
-# Recipe:: ppa
+# Recipe:: repository
 # Cookbook:: unifi
 # Author:: Greg Albrecht <gba@onbeep.com>
 # License:: Apache License, Version 2.0

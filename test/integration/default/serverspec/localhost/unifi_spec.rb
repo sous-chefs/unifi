@@ -21,9 +21,10 @@ describe 'UniFi' do
     it { should be_listening }
   end
 
-  describe port('8081') do
-    it { should be_listening }
-  end
+  # Disabled as unifi no longer seems to use port 8081
+  # describe port('8081') do
+  #   it { should be_listening }
+  # end
 
   describe port('8443') do
     it { should be_listening }

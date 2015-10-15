@@ -8,7 +8,7 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-include_recipe 'unifi::ppa'
+include_recipe 'unifi::repository'
 include_recipe 'unifi::package'
 
 if platform?('ubuntu') && node['lsb']['codename'] == 'trusty'
