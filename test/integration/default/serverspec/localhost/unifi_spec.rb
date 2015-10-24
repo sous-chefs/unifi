@@ -6,9 +6,7 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
 require 'spec_helper'
-
 
 describe 'UniFi' do
   describe package('unifi') do
@@ -39,7 +37,6 @@ describe 'UniFi' do
     it { should be_listening }
   end
 end
-
 
 describe 'MongoDB' do
   describe package('mongodb-server') do

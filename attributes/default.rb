@@ -8,7 +8,6 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
 #
 # Specify Unifi package to install.
 #   There are 3 packages in the same repository:
