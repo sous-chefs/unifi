@@ -11,10 +11,9 @@ Requirements
 
 ### Platform
 
-* Ubuntu 12.04 LTS
-* Ubuntu 14.04 LTS
+* Ubuntu
+* Debian
 
-May work with or without modification on other Debian derivatives.
 
 Recipes
 ----
