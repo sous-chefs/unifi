@@ -1,50 +1,53 @@
-unifi Cookbook
-====
-[![Cookbook Version](http://img.shields.io/cookbook/v/unifi.svg)][cookbook]
+# unifi Cookbook
 
-[cookbook]: https://community.opscode.com/cookbooks/unifi
+[![Cookbook Version](http://img.shields.io/cookbook/v/unifi.svg)][cookbook] [![Build Status](https://travis-ci.org/tas50/unifi.svg?branch=master)](https://travis-ci.org/tas50/unifi)
 
 This Cookbook includes Recipes to install, configure & enable Ubiquiti's UniFi Access-Point controller software.
 
-Requirements
-----
+## Requirements
 
 ### Platform
 
-* Ubuntu
-* Debian
+- Ubuntu
+- Debian
 
+## Recipes
 
-Recipes
-----
 ### default
+
 Includes other requisite Recipes - **USE THIS**.
 
 ### ppa
+
 Configures Ubiquity's PPA repository for package installs.
 
 ### package
+
 Installs unifi package.
 
 ### service
+
 Configures unifi service.
 
 ### _java_link_trusty_tahr
+
 Work-around for Ubuntu Trust Tahr's Java install.
 
-Usage
-----
+## Usage
+
 Put `recipe[unifi]` in the Run List. Run Chef. Enjoy.
 
-Authors
-----
-- Author:: Brian Dwyer https://github.com/bdwyertech
-- Author:: Greg Albrecht (gba@onbeep.com) https://github.com/ampledata
+## Authors
 
-License
-----
+- Author:: Brian Dwyer <https://github.com/bdwyertech>
+- Author:: Greg Albrecht (gba@orionlabs.io) <https://github.com/ampledata>
+- Author:: Tim Smith (tsmith@chef.io) <https://github.com/tas50>
+
+## License
+
 ```text
-Copyright 2014 OnBeep, Inc.
+Copyright 2014-2016 Orion Labs, Inc.
+Copyright 2016 Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -58,3 +61,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+[cookbook]: https://community.opscode.com/cookbooks/unifi
