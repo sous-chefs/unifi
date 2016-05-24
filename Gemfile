@@ -11,13 +11,24 @@
 
 source 'https://rubygems.org'
 
+group :lint do
+  gem 'foodcritic', '~> 5.0'
+  gem 'rubocop', '~> 0.34'
+end
 
-gem 'berkshelf', '3.1.1'
+group :unit do
+  gem 'berkshelf',  '~> 4.0'
+  gem 'chefspec',   '~> 4.4'
+end
+
+group :kitchen_common do
+  gem 'test-kitchen', '~> 1.4'
+end
+
+group :kitchen_vagrant do
+  gem 'kitchen-vagrant', '~> 0.19'
+end
 
 group :integration do
-  gem 'chefspec', '3.4.0'
-  gem 'foodcritic', '3.0.3'
-  gem 'kitchen-vagrant', '0.14.0'
-  gem 'test-kitchen', '1.2.1'
   gem 'thor-scmversion', '1.4.0'
 end
