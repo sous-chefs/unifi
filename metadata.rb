@@ -10,5 +10,6 @@ supports 'ubuntu'
 supports 'debian'
 
 depends 'apt'
-source_url 'https://github.com/tas50/unifi' if respond_to?(:source_url)
-issues_url 'https://github.com/tas50/unifi/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/tas50/unifi'
+issues_url 'https://github.com/tas50/unifi/issues'
+chef_version '>= 12.1'

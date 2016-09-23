@@ -11,6 +11,10 @@ This Cookbook includes Recipes to install, configure & enable Ubiquiti's UniFi A
 - Ubuntu
 - Debian
 
+### Chef
+
+- Chef 12.1+
+
 ## Recipes
 
 ### default
