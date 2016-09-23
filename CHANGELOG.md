@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the unfi cookbook.
 
+## v1.2.0 (2016-09-23)
+
+- Add an attribute for setting the repo components so you can use unstable releases
+- Require at least Chef 12.1
+- Add chef_version metadata
+- Misc testing improvements
+
 ## v1.1.0 (2016-05-24)
 
 - Ownership has been transferred from Orion Labs. Thanks for all the original work folks.
