@@ -4,6 +4,9 @@ driver:
 provisioner:
   name: chef_zero
 
+verifier:
+  name: inspec
+
 platforms:
   - name: debian-7.11
   - name: debian-8.5
