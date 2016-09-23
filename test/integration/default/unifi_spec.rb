@@ -6,7 +6,6 @@
 # Source:: https://github.com/onbeep-cookbooks/unifi
 #
 
-
 # unifi
 describe package('unifi') do
   it { should be_installed }
