@@ -17,3 +17,12 @@
 #   BONUS: You can install / switch between them!
 #
 default['unifi']['package'] = 'unifi'
+
+#
+# Specify the apt components
+#   There are three available
+#     - unifi4/stable  (Unifi version 4.x.x)
+#     - unifi5         (Unifi version 5.x.x)
+#     - unifi3         (Unifi version 3.x.x)
+#
+default['unifi']['apt_components'] = %w(stable ubiquiti)
