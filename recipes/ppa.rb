@@ -10,7 +10,7 @@
 
 apt_repository 'ubiquiti_unifi' do
   uri 'http://www.ubnt.com/downloads/unifi/debian'
-  components %w(stable ubiquiti)
+  components node['unifi']['apt_components']
   distribution nil
   keyserver 'keyserver.ubuntu.com'
   key 'C0A52C50'
