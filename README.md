@@ -1,6 +1,6 @@
 # unifi Cookbook
 
-[![Cookbook Version](http://img.shields.io/cookbook/v/unifi.svg)][cookbook] [![Build Status](https://travis-ci.org/tas50/unifi.svg?branch=master)](https://travis-ci.org/tas50/unifi)
+[![Cookbook Version](http://img.shields.io/cookbook/v/unifi.svg)][cookbook] [![CircleCI](https://circleci.com/gh/sous-chefs/unifi.svg?style=svg)](https://circleci.com/gh/sous-chefs/unifi)
 
 This Cookbook includes Recipes to install, configure & enable Ubiquiti's UniFi Access-Point controller software.
 
