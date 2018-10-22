@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the unfi cookbook.
 
+## unreleased (2018-10-18)
+
+- Changed CI to use circleci
+
 ## v1.2.0 (2016-09-23)
 
 - Add an attribute for setting the repo components so you can use unstable releases

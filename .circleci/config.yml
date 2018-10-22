@@ -1,0 +1,37 @@
+version: 2.1
+
+orbs:
+  kitchen: sous-chefs/kitchen@1.0.0
+
+workflows:
+  kitchen:
+    jobs:
+      - kitchen/danger:
+          name: danger
+          context: Danger
+      - kitchen/lint:
+          name: lint
+      # - kitchen/dokken:
+      #     name: default
+      #     suite: default
+      #     requires: [  danger, lint ]
+      # - kitchen/dokken-single:
+      #     name: debian-9
+      #     suite: default
+      #     platform: debian-9
+      #     requires: [  danger, lint ]
+      # - kitchen/dokken-single:
+      #     name: debian-8
+      #     suite: default
+      #     platform: debian-8
+      #     requires: [  danger, lint ]
+      # - kitchen/dokken-single:
+      #     name: ubuntu-1604
+      #     suite: default
+      #     platform: ubuntu-1604
+      #     requires: [  danger, lint ]
+      # - kitchen/dokken-single:
+      #     name: ubuntu-1804
+      #     suite: default
+      #     platform: ubuntu-1804
+      #     requires: [  danger, lint ]
