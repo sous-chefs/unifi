@@ -14,4 +14,4 @@ depends 'java'
 source_url 'https://github.com/sous-chefs/unifi'
 issues_url 'https://github.com/sous-chefs/unifi/issues'
 
-chef_version '>= 12.1'
+chef_version '>= 12.7'
