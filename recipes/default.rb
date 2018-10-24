@@ -10,9 +10,4 @@
 
 include_recipe 'unifi::ppa'
 include_recipe 'unifi::package'
-
-if platform?('ubuntu') && node['lsb']['codename'] == 'trusty'
-  include_recipe 'unifi::_java_link_trusty_tahr'
-end
-
 include_recipe 'unifi::service'

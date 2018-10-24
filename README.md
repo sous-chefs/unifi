@@ -42,10 +42,6 @@ Installs unifi package.
 
 Configures unifi service.
 
-### _java_link_trusty_tahr
-
-Work-around for Ubuntu Trust Tahr's Java install.
-
 ## Usage
 
 Put `recipe[unifi]` in the Run List. Run Chef. Enjoy.
