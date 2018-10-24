@@ -9,7 +9,8 @@ version '1.2.0'
 supports 'ubuntu'
 supports 'debian'
 
-depends 'apt'
+depends 'java'
+
 source_url 'https://github.com/tas50/unifi'
 issues_url 'https://github.com/tas50/unifi/issues'
 chef_version '>= 12.1'
