@@ -11,6 +11,7 @@ supports 'debian'
 
 depends 'java'
 
-source_url 'https://github.com/tas50/unifi'
-issues_url 'https://github.com/tas50/unifi/issues'
+source_url 'https://github.com/sous-chefs/unifi'
+issues_url 'https://github.com/sous-chefs/unifi/issues'
+
 chef_version '>= 12.1'
