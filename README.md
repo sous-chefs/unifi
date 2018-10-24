@@ -15,6 +15,15 @@ This Cookbook includes Recipes to install, configure & enable Ubiquiti's UniFi A
 
 - Chef 12.1+
 
+### Java
+
+UniFi requires Java 8 ([UniFi Java Requirements](https://help.ubnt.com/hc/en-us/articles/360008240754#7)). The `java` cookbook can be used to install JRE 8 with the appropriate attributes:
+
+```ruby
+node.default['java']['jdk_version'] = "8"
+include_recipe 'java'
+```
+
 ## Recipes
 
 ### default
