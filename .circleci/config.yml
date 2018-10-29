@@ -11,10 +11,6 @@ workflows:
           context: Danger
       - kitchen/lint:
           name: lint
-      - kitchen/dokken:
-          name: default
-          suite: default
-          requires: [  danger, lint ]
       - kitchen/dokken-single:
           name: debian-9
           suite: default
