@@ -40,10 +40,6 @@ describe package('mongodb-clients') do
   it { should be_installed }
 end
 
-describe processes('bin/mongod') do
-  it { should exist }
-end
-
 describe port('27117') do
   it { should be_listening }
 end
