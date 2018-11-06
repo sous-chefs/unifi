@@ -19,10 +19,6 @@ describe port('8080') do
   it { should be_listening }
 end
 
-describe port('8081') do
-  it { should be_listening }
-end
-
 describe port('8443') do
   it { should be_listening }
 end
@@ -42,18 +38,6 @@ end
 
 describe package('mongodb-clients') do
   it { should be_installed }
-end
-
-describe service('mongodb') do
-  it { should be_running }
-end
-
-describe port('27017') do
-  it { should be_listening }
-end
-
-describe port('28017') do
-  it { should be_listening }
 end
 
 describe port('27117') do

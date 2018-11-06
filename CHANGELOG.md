@@ -2,9 +2,12 @@
 
 This file is used to list changes made in each version of the unfi cookbook.
 
-## unreleased (2018-10-18)
+## Unreleased (2018-10-18)
 
 - Changed CI to use circleci
+- Get InSpec tests passing
+- Bump minimum Chef version to 12.7 for `apt_updater` resource
+- Add dependency on the `java` cookbook and remove obsolete Java 6 support
 
 ## v1.2.0 (2016-09-23)
 
