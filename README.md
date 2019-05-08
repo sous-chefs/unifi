@@ -1,6 +1,10 @@
 # unifi Cookbook
 
-[![Cookbook Version](http://img.shields.io/cookbook/v/unifi.svg)][cookbook] [![CircleCI](https://circleci.com/gh/sous-chefs/unifi.svg?style=svg)](https://circleci.com/gh/sous-chefs/unifi)
+[![Cookbook Version](https://img.shields.io/cookbook/v/unifi.svg)](https://supermarket.chef.io/cookbooks/unifi)
+[![Build Status](https://img.shields.io/circleci/project/github/sous-chefs/unifi/master.svg)](https://circleci.com/gh/sous-chefs/unifi)
+[![OpenCollective](https://opencollective.com/sous-chefs/backers/badge.svg)](#backers)
+[![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
 This Cookbook includes Recipes to install, configure & enable Ubiquiti's UniFi Access-Point controller software.
 
@@ -52,23 +56,27 @@ Put `recipe[unifi]` in the Run List. Run Chef. Enjoy.
 - Author:: Greg Albrecht (gba@orionlabs.io) <https://github.com/ampledata>
 - Author:: Tim Smith (tsmith@chef.io) <https://github.com/tas50>
 
-## License
+## Contributors
 
-```text
-Copyright 2014-2016 Orion Labs, Inc.
-Copyright 2016 Chef Software, Inc.
+This project exists thanks to all the people who [contribute.](https://opencollective.com/sous-chefs/contributors.svg?width=890&button=false)
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+### Backers
 
-    http://www.apache.org/licenses/LICENSE-2.0
+Thank you to all our backers!
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+![https://opencollective.com/sous-chefs#backers](https://opencollective.com/sous-chefs/backers.svg?width=600&avatarHeight=40)
 
-[cookbook]: https://community.opscode.com/cookbooks/unifi
+### Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
+
+![https://opencollective.com/sous-chefs/sponsor/0/website](https://opencollective.com/sous-chefs/sponsor/0/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/1/website](https://opencollective.com/sous-chefs/sponsor/1/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/2/website](https://opencollective.com/sous-chefs/sponsor/2/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/3/website](https://opencollective.com/sous-chefs/sponsor/3/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/4/website](https://opencollective.com/sous-chefs/sponsor/4/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/5/website](https://opencollective.com/sous-chefs/sponsor/5/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/6/website](https://opencollective.com/sous-chefs/sponsor/6/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/7/website](https://opencollective.com/sous-chefs/sponsor/7/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/8/website](https://opencollective.com/sous-chefs/sponsor/8/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/9/website](https://opencollective.com/sous-chefs/sponsor/9/avatar.svg?avatarHeight=100)
