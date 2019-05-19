@@ -8,6 +8,7 @@ This file is used to list changes made in each version of the unfi cookbook.
 - Get InSpec tests passing
 - Bump minimum Chef version to 12.7 for `apt_updater` resource
 - Add dependency on the `java` cookbook and remove obsolete Java 6 support
+- Depreciated support for Debian 8 as openjdk is not easily available
 
 ## v1.2.0 (2016-09-23)
 
