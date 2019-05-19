@@ -1,3 +1,4 @@
+---
 driver:
   name: vagrant
 
@@ -15,7 +16,7 @@ platforms:
   - name: ubuntu-16.04
 
 suites:
-- name: default
-  run_list:
-    - recipe[test]
-    - recipe[unifi]
+  - name: default
+    run_list:
+      - recipe[test]
+      - recipe[unifi]
