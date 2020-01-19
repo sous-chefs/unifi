@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the unfi cookbook.
 
-## Unreleased (2019-12-03)
+## Unreleased
 
 - Changed CI to use circleci
 - Get InSpec tests passing
@@ -10,6 +10,7 @@ This file is used to list changes made in each version of the unfi cookbook.
 - Add dependency on the `java` cookbook and remove obsolete Java 6 support
 - Removed support for Debian 8 as openjdk is not easily available
 - Removed unused long_description from metadata.rb
+- Migrate to actions
 
 ## v1.2.0 (2016-09-23)
 
