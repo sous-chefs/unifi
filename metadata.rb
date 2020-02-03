@@ -8,8 +8,7 @@ source_url        'https://github.com/sous-chefs/unifi'
 issues_url        'https://github.com/sous-chefs/unifi/issues'
 chef_version      '>= 13.0'
 
-%w(ubuntu debian).each do |os|
-  supports os
-end
+supports 'ubuntu'
+supports 'debian'
 
 depends 'java'
