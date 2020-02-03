@@ -2,10 +2,10 @@
 
 This file is used to list changes made in each version of the unfi cookbook.
 
-## Unreleased
+## v2.0.0 (2020-02-01)
 
 - Get InSpec tests passing
-- Bump minimum Chef Infra Client version to 12.7 for `apt_update` resource
+- Bump minimum Chef Infra Client version to 13+ for `apt_update` resource
 - Add dependency on the `java` cookbook and remove obsolete Java 6 support
 - Removed support for Debian 8 as openjdk is not easily available
 - Removed unused long_description from metadata.rb
