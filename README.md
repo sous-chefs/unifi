@@ -57,8 +57,8 @@ Put `recipe[unifi]` in the Run List. Run Chef. Enjoy.
 ## Authors
 
 - Author:: Brian Dwyer <https://github.com/bdwyertech>
-- Author:: Greg Albrecht (gba@orionlabs.io) <https://github.com/ampledata>
-- Author:: Tim Smith (tsmith@chef.io) <https://github.com/tas50>
+- Author:: Greg Albrecht (<gba@orionlabs.io>) <https://github.com/ampledata>
+- Author:: Tim Smith (<tsmith@chef.io>) <https://github.com/tas50>
 
 ## Contributors
 
