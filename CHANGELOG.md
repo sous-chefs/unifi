@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the unfi cookbook.
 
+## [2.0.17](https://github.com/sous-chefs/unifi/compare/v2.0.16...v2.0.17) (2025-10-16)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#74](https://github.com/sous-chefs/unifi/issues/74)) ([49c3e4c](https://github.com/sous-chefs/unifi/commit/49c3e4c625f7b32426c5f0b9280cb49e06c33236))
+
 ## v2.0.0 (2020-02-01)
 
 * Get InSpec tests passing
