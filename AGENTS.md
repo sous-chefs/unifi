@@ -57,3 +57,12 @@ that VM during installer investigation; CI must also exercise a clean runner.
 
 The install-state marker `/var/lib/uosserver/server.conf`, `uosserver` account,
 `uosserver.service` and HTTPS port 11443 were verified against this real runtime.
+
+A separate clean Debian 13 ARM64 VM passed the same Kitchen profile: first
+converge updated seven of eleven resources (including runtime prerequisites),
+second converge updated zero of seven, and all nine checks passed. Both VMs
+used Cinc Workstation 26.4.0 packages verified against official SHA-256 metadata.
+
+The existing conventional-commit caller omitted the `pull-requests: read`
+permission required by the pinned reusable workflow. Add that caller permission;
+do not weaken the title check or change the reusable workflow's token trust.
