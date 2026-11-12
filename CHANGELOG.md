@@ -2,6 +2,22 @@
 
 This file is used to list changes made in each version of the unfi cookbook.
 
+## [3.0.0](https://github.com/sous-chefs/unifi/compare/v2.0.17...v3.0.0) (2026-11-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* Replace legacy Network Server recipes and attributes with an install-only UniFi OS Server resource for Ubuntu 24.04+ and Debian 13+. Existing controller data is never migrated or removed.
+
+### Features
+
+* install UniFi OS Server ([#90](https://github.com/sous-chefs/unifi/issues/90)) ([c4f4246](https://github.com/sous-chefs/unifi/commit/c4f424613909249650048c55d1f8470f1a6e5352))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#74](https://github.com/sous-chefs/unifi/issues/74)) ([49c3e4c](https://github.com/sous-chefs/unifi/commit/49c3e4c625f7b32426c5f0b9280cb49e06c33236))
+
 ## [2.0.17](https://github.com/sous-chefs/unifi/compare/v2.0.16...v2.0.17) (2025-10-16)
 
 
