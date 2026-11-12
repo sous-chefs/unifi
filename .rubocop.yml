@@ -1,4 +1,3 @@
 ---
-AllCops:
-  Exclude:
-    - 'Dangerfile'
+inherit_gem:
+  cookstyle: config/cookstyle.yml
