@@ -1,0 +1,7 @@
+---
+name: unifi-os-server
+title: UniFi OS Server installation
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Clean-host installation and service checks
+version: 1.0.0

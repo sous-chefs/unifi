@@ -1,86 +1,56 @@
-# unifi Cookbook
+# UniFi cookbook
 
 [![Cookbook Version](https://img.shields.io/cookbook/v/unifi.svg)](https://supermarket.chef.io/cookbooks/unifi)
-[![Build Status](https://img.shields.io/circleci/project/github/sous-chefs/unifi/master.svg)](https://circleci.com/gh/sous-chefs/unifi)
-[![OpenCollective](https://opencollective.com/sous-chefs/backers/badge.svg)](#backers)
-[![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CI](https://github.com/sous-chefs/unifi/actions/workflows/ci.yml/badge.svg)](https://github.com/sous-chefs/unifi/actions/workflows/ci.yml)
 
-This Cookbook includes Recipes to install, configure & enable Ubiquiti's UniFi Access-Point controller software.
+Installs **UniFi OS Server** on a clean Linux host using the official vendor
+installer. This cookbook does not manage backups, data migration, application
+configuration or upgrades.
 
-## Maintainers
-
-This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of Chef cookbook maintainers working together to maintain important cookbooks. If you’d like to know more please visit [sous-chefs.org](https://sous-chefs.org/) or come chat with us on the Chef Community Slack in [#sous-chefs](https://chefcommunity.slack.com/messages/C2V7B88SF).
+Cookbook 3 replaces the legacy UniFi Network Server recipes and attributes with
+the [unifi_os_server](documentation/unifi_os_server.md) custom resource.
+See [the cookbook API changes](migration.md) before upgrading.
 
 ## Requirements
 
-### Platform
+* Chef Infra Client 15.3+ or a compatible Cinc Client.
+* Ubuntu 24.04+ or Debian 13+, running systemd.
+* x86-64 or ARM64 CPU, at least 2 GB RAM and sufficient disk space for the vendor
+  installer. Consult the [official requirements](https://help.ui.com/hc/en-us/articles/34210126298775-Self-Hosting-UniFi)
+  for deployment sizing.
+* A pinned official Linux installer URL matching the host architecture and its
+  independently verified SHA-256 checksum.
 
-- Ubuntu
-- Debian
-
-### Chef
-
-- Chef 12.1+
-
-### Java
-
-UniFi requires Java 8 ([UniFi Java Requirements](https://help.ubnt.com/hc/en-us/articles/360008240754#7)). The `java` cookbook can be used to install JRE 8 with the appropriate attributes:
-
-```ruby
-node.default['java']['jdk_version'] = "8"
-include_recipe 'java'
-```
-
-## Recipes
-
-### default
-
-Includes other requisite Recipes - **USE THIS**.
-
-### ppa
-
-Configures Ubiquiti's PPA repository for package installs.
-
-### package
-
-Installs unifi package.
-
-### service
-
-Configures unifi service.
+Ubuntu and Debian distribution packages supply Podman, pasta and slirp4netns.
+There is no Java cookbook dependency and no legacy UniFi APT repository.
 
 ## Usage
 
-Put `recipe[unifi]` in the Run List. Run Chef. Enjoy.
+Obtain an installer URL from the [vendor download page](https://ui.com/download/software/unifi-os-server),
+verify its SHA-256 digest, then pass both explicitly:
 
-## Authors
+```ruby
+unifi_os_server 'controller' do
+  installer_url 'https://fw-download.ubnt.com/data/unifi-os-server/5172-linux-x64-5.1.42-12e9e3cf-8f8b-4e54-928c-76b80a10c8a4.42-x64'
+  installer_checksum 'f6111e9396a42c74016f5dde9b01fbef486a6fe69efe137935e6e38b7c22f94d'
+end
+```
 
-- Author:: Brian Dwyer <https://github.com/bdwyertech>
-- Author:: Greg Albrecht (<gba@orionlabs.io>) <https://github.com/ampledata>
-- Author:: Tim Smith (<tsmith@chef.io>) <https://github.com/tas50>
+This example is UniFi OS Server 5.1.42 for x86-64. Use the appropriate vendor
+installer and digest for ARM64.
 
-## Contributors
+The resource installs host prerequisites, invokes the installer in non-interactive
+pasta mode, and enables and starts `uosserver.service`. The vendor installer
+performs its normal resource and port checks. Once installed, later converges do
+not reinstall, downgrade or update UniFi OS Server. Product and application
+updates remain outside this cookbook's scope.
 
-This project exists thanks to all the people who [contribute.](https://opencollective.com/sous-chefs/contributors.svg?width=890&button=false)
+Existing legacy Network Server state causes a clear failure before any packages,
+services or data are changed. Installing the new product over an existing
+controller, transferring data and uninstalling either product are outside scope.
 
-### Backers
+## Testing
 
-Thank you to all our backers!
-
-![https://opencollective.com/sous-chefs#backers](https://opencollective.com/sous-chefs/backers.svg?width=600&avatarHeight=40)
-
-### Sponsors
-
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
-
-![https://opencollective.com/sous-chefs/sponsor/0/website](https://opencollective.com/sous-chefs/sponsor/0/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/1/website](https://opencollective.com/sous-chefs/sponsor/1/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/2/website](https://opencollective.com/sous-chefs/sponsor/2/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/3/website](https://opencollective.com/sous-chefs/sponsor/3/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/4/website](https://opencollective.com/sous-chefs/sponsor/4/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/5/website](https://opencollective.com/sous-chefs/sponsor/5/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/6/website](https://opencollective.com/sous-chefs/sponsor/6/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/7/website](https://opencollective.com/sous-chefs/sponsor/7/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/8/website](https://opencollective.com/sous-chefs/sponsor/8/avatar.svg?avatarHeight=100)
-![https://opencollective.com/sous-chefs/sponsor/9/website](https://opencollective.com/sous-chefs/sponsor/9/avatar.svg?avatarHeight=100)
+See [TESTING.md](TESTING.md). Real installation tests require disposable systemd
+VMs. The vendor does not support running UniFi OS Server as a standalone Docker
+container.
